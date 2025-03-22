@@ -1,0 +1,45 @@
+/*  الوضع الفاتح  */
+:root {
+  --bg-image: url('../images/white.jpg');
+  --navbar-bg: #4a0d10;
+  --sidebar-bg: #ffffff;
+  --card-bg: #460005ca;
+  --button-bg: #800020;
+  --button-hover-bg: #a31d30;
+  --text-color: #ffffff;
+  --icon-color: #d3a7a2;
+  --toggle-bg: hsl(345, 100%, 25%);
+  --toggle-thumb: #ffffff;
+ 
+  --glow-color: rgba(78, 1, 20, 0.989);
+  --text-gradient-from: #4a0d10;
+  --text-gradient-to: #800020;
+}
+
+/*  الوضع الداكن */
+[data-theme="dark"] {
+  --bg-image: url('../images/black.jpg');
+  --navbar-bg: #4a0d10;
+  --sidebar-bg: #000000;
+  --card-bg: #460005ca;
+  --button-bg: #800020;
+  --button-hover-bg: #a31d30;
+  --text-color: #ffffff;
+  --icon-color: #d3a7a2;
+  --toggle-bg: hsl(345, 100%, 25%);
+  --toggle-thumb: #ffffff;
+ 
+  --glow-color: rgba(78, 1, 20, 0.989);
+  --text-gradient-from: #4a0d10;
+  --text-gradient-to: #800020;
+}
+
+/*  الخلفية */
+body {
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--text-color);
+  transition: background 0.5s ease-in-out, color 0.3s ease-in-out;
+}

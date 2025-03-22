@@ -1,0 +1,49 @@
+/* SearchInput.module.css */
+
+/* نموذج البحث */
+.searchForm {
+    width: 100%;
+}
+
+/* حاوية البحث */
+.searchContainer {
+    position: relative;
+}
+
+/* أيقونة البحث */
+.searchIcon {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding-left: 0.75rem;
+    pointer-events: none;
+    color: var(--icon-color);
+    margin-top: 10px;
+}
+
+/* حقل إدخال البحث */
+.searchInput {
+    width: 100%;
+    padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+    font-size: 0.875rem;
+    color: var(--text-color);
+    border: 2px solid var(--glow-color);
+    box-shadow: 0px 0px 1px var(--glow-color), 0px 0px 5px var(--glow-color);
+
+    border-radius: 10px;
+    background: var(--toggle-thumb);
+    transition: 0.2s ease-in-out;
+}
+html[data-theme="dark"] .searchInput {
+    border: 1px solid var(--glow-color);
+    border-radius: 10px;
+  }
+  html[data-theme="dark"] .searchInput:hover {
+    outline: none;
+    box-shadow: 0px 0px 15px var(--glow-color), 0px 0px 20px var(--glow-color);
+
+}
+.searchInput:hover {
+    outline: none;
+    box-shadow: 0px 0px 15px var(--glow-color), 0px 0px 20px var(--glow-color);
+}

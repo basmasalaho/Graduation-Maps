@@ -1,0 +1,48 @@
+/* SortSelector.module.css */
+
+/* زر الترتيب */
+.sortButton {
+    position: relative;
+    background: var(--button-bg);
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border: 0,5px solid var(--glow-color);
+    box-shadow: 0px 0px 1px var(--glow-color), 0px 0px 5px var(--glow-color);
+ 
+}
+
+.sortButton:hover {
+    background: var(--button-hover-bg);
+}
+
+/* قائمة الترتيب المنسدلة */
+.sortDropdown {
+    background: var(--card-bg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    position: absolute;
+    top: 27%;
+    left: 25%;
+    margin-top: 0.5rem;
+    min-width: 150px;
+    z-index: 10;
+}
+
+/* عنصر في قائمة الترتيب */
+.sortItem {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: 0.2s;
+}
+
+.sortItem:hover {
+    background: var(--button-hover-bg);
+    color: #fff;
+}

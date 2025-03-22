@@ -1,0 +1,134 @@
+/* شريط التنقل الرئيسي */
+.navbar {
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: var(--navbar-bg);
+    color: var(--text-color);
+   
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* قسم الشعار */
+.logoSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    margin-left: 5%;
+}
+
+.logoSection img {
+
+    object-fit: contain;
+}
+
+@media (min-width: 768px) {
+    .logoSection {
+        justify-content: flex-start;
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* قسم البحث */
+.searchSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 500px;
+    width: 100%;
+   
+}
+
+@media (min-width: 768px) {
+    .searchSection {
+        justify-content: flex-start;
+    }
+}
+
+/* زر تبديل السمة */
+.themeToggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .themeToggle {
+        justify-content: flex-end;
+    }
+}
+/* زر القائمة */
+.menuButton {
+    
+    top: 15px;
+    left: 15px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    color: var(--toggle-thumb);
+}
+
+/* حالة فتح القائمة */
+.menuButton.open {
+    left: 260px;
+}
+/* زر الإغلاق */
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: rgb(247, 5, 5);
+    cursor: pointer;
+}
+
+/* قائمة الهامبرجر */
+.hamburger {
+    cursor: pointer;
+}
+
+.hamburger input {
+    display: none;
+}
+
+.hamburger svg {
+    height: 1.5em;
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1); /* Faster transition */
+}
+
+.hamburger input:checked + svg {
+    transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .lineTopBottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+}
+
+.line {
+    fill: none;
+    stroke: rgb(255, 255, 255);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lineTopBottom {
+    stroke-dasharray: 12 63;
+}
+
+.displaced {
+    margin-left: 240px; /* Adjust the displacement value as needed */
+    transition: transform 10ms ease-in-out;
+}

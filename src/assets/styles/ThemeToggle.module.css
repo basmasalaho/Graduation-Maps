@@ -1,0 +1,30 @@
+/* زر تبديل السمة */
+.toggleThumb {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease;
+}
+
+/* تأثير الدوران عند التبديل */
+.rotating {
+  transform: rotate(180deg);
+}
+
+/* تنسيق مشترك لأيقونات القمر والشمس */
+.moonIcon, .sunIcon {
+  font-size: 24px;
+  transition: opacity 0.3s ease;
+}
+
+/* أيقونة القمر للوضع الليلي */
+.moonIcon {
+  color: var(--toggle-thumb);
+}
+
+/* أيقونة الشمس للوضع النهاري */
+.sunIcon {
+  color:var(--toggle-thumb);
+}

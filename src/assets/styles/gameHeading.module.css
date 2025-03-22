@@ -1,0 +1,11 @@
+
+/* نص العنوان مع تأثير التدرج اللوني */
+.gradientText {
+    background: linear-gradient(to right, var(--text-gradient-from), var(--text-gradient-to));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 3rem; 
+    margin: 1.5rem 1.5rem; 
+    font-weight: 800; 
+}

@@ -1,0 +1,201 @@
+/* الحاوية الرئيسية للصفحة */
+.container {
+  min-height: 100vh;
+  padding: 2rem;
+   position: relative;
+}
+
+/* الخلفية المتحركة للصفحة */
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: var(--game-background);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+/* حاوية المحتوى الرئيسي */
+.wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* زر العودة للصفحة الرئيسية */
+.returnButton {
+  position: sticky;
+  top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: rgba(74, 13, 16, 0.9);
+  color: #fff5f5;
+  border-radius: 1.25rem;
+  transition: all 0.5s;
+  box-shadow: 0 0 30px rgba(74, 13, 16, 0.6);
+}
+
+/* حاوية بطاقة اللعبة */
+.cardWrapper {
+  max-width: 768px;
+  transition: all 0.7s ease-in-out;
+}
+
+/* البطاقة الرئيسية */
+.card {
+  background-color: #2a0508;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(74, 13, 16, 0.4);
+  transition: all 0.5s;
+}
+
+/* حاوية عرض الصور المتحركة */
+.swiperContainer {
+  width: 100%;
+  height: 300px;
+}
+
+/* محتوى الشريحة الرئيسية */
+.slideContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #4a0d10, hsl(345,100%,25%), rgba(78,1,20,0.989));
+}
+
+/* عنوان اللعبة */
+.gameTitle {
+  font-size: 3rem;
+  color: #fff5f5;
+  font-weight: bold;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s;
+}
+
+/* صور اللعبة */
+.screenshot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* حاوية المحتوى النصي */
+.contentWrapper {
+  padding: 1.5rem;
+}
+
+/* حاوية وصف اللعبة */
+.descriptionWrapper {
+  margin-bottom: 1rem;
+}
+
+/* نص وصف اللعبة */
+.description {
+  color: #ffd9d9;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* زر اظهار المزيد من الوصف */
+.readMoreButton {
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  background-color: #4a0d10;
+  color: #fff5f5;
+  border-radius: 9999px;
+  transition: all 0.5s;
+}
+
+/* شبكة الاحصائيات */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* بطاقة الاحصائيات */
+.statCard {
+  padding: 1rem;
+  background-color: rgba(74,13,16,0.3);
+  border-radius: 1rem;
+  transition: all 0.5s;
+}
+
+/* عنوان الاحصائية */
+.statLabel {
+  color: #fff5f5;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* قيمة الاحصائية */
+.statValue {
+  color: #ffd9d9;
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+/* Dark mode styles */
+html[data-theme="dark"] .container {
+  background: linear-gradient(to bottom right, #000000, hsl(345, 100%, 9%),#000000);
+}
+.container {
+  
+  background: linear-gradient(to bottom right, #ffffff, #c05c61,#ffffff);
+ 
+}
+html[data-theme="dark"] .container::before {
+  opacity: 0.05;
+}
+
+html[data-theme="dark"] .card {
+  background-color: #2a0508;
+}
+
+html[data-theme="dark"] .description {
+  color: #ffd9d9;
+}
+
+html[data-theme="dark"] .statCard {
+  background-color: rgba(74,13,16,0.3);
+}
+
+html[data-theme="dark"] .statLabel {
+  color: #fff5f5;
+}
+
+html[data-theme="dark"] .statValue {
+  color: #ffd9d9;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.gameTitleImage {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.gameTitleImage:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
